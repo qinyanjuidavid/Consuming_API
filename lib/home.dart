@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
 
   _retrieveUsers() async {
     users = [];
-    var url = Uri.parse("http://127.0.0.1:8000/api/v1/");
+    var url = Uri.parse("https://jsonplaceholder.typicode.com/users");
     var response = json.decode((await http.get(url)).body);
 
     response.forEach((element) {
